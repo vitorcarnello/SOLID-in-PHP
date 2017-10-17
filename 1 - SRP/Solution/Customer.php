@@ -15,7 +15,7 @@ class Customer
 		$this->email = $email;
 	}	
 
-	public function isValid(Customer $customer)
+	function isValid(Customer $customer)
 	{
 		$service = new EmailServices();
 

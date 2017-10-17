@@ -12,7 +12,7 @@ class Customer
 		$this->email = $email;
 	}
 
-	public function addCustomer(Customer $customer)
+	function addCustomer(Customer $customer)
 	{
 		if(strpos($this->email, '@') !== true)
 			return "Invalid email!";

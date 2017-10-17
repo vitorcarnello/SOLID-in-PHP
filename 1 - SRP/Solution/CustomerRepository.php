@@ -2,7 +2,7 @@
 
 class CustomerRepository
 {
-	public function addCustomer(Customer $customer)
+	function addCustomer(Customer $customer)
 	{
 		$connection = mysqli_connect("localhost","root","","customers");
 
