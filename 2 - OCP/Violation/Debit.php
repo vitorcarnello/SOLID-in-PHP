@@ -4,8 +4,7 @@ require "AccountType.php";
 
 class Debit
 {	
-	function toDebit($value, $accountType)
-	{
+	function toDebit($value, $accountType){
 		if($accountType == CHECKING_ACCOUNT){
 			// do something
 		}

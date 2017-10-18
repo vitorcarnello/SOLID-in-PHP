@@ -6,14 +6,12 @@ class Customer
 	public $email;
 	public $registerDate;
 
-	function __construct($name, $email)
-	{
+	function __construct($name, $email){
 		$this->name = $name;
 		$this->email = $email;
 	}
 
-	function addCustomer(Customer $customer)
-	{
+	function addCustomer(Customer $customer){
 		if(strpos($this->email, '@') !== true)
 			return "Invalid email!";
 

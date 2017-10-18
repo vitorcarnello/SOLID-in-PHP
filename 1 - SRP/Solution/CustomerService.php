@@ -6,8 +6,7 @@ require "EmailServices.php";
 
 class CustomerService
 {
-	function addCustomer(Customer $customer)
-	{
+	function addCustomer(Customer $customer){
 		if(!$customer->isValid($customer))
 			return "Dados inválidos";
 
