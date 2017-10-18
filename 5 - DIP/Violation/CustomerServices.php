@@ -2,11 +2,11 @@
 
 require "Customer.php";
 require "CustomerRepository.php";
-require "EmailServices.php";
 
-class CustomerService
+class CustomerServices
 {
-	function addCustomer(Customer $customer){
+	function save(Customer $customer){
+
 		if(!$customer->isValid())
 			return "Invalid data!";
 
@@ -14,7 +14,7 @@ class CustomerService
 		$repository->addCustomer($customer);
 
 		$email = new EmailServices();
-		$email->send("sample@mail.com", $customer->email, "Welcome!", "You're registered!")
+		$email->send("sample@mail.com", $customer->email, "Welcome!", "You're registered!");
 
 		return "Customer registered!";
 	}

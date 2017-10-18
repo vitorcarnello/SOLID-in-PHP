@@ -7,9 +7,19 @@ class Square extends Rectangle
 	public $height;
 	public $width;
 
-	function __construct($height, $width)
-	{
-		$this->height = $width;
-		$this->width = $height;
+	public function getHeight(){
+		return $this->height;
+	}
+
+	public function setHeight($height){
+		$this->height = $height;
+	}	
+
+	public function setWidth($width){
+		$this->width = $width;
+	}
+
+	public function getwidth(){
+		return $this->width;
 	}
 }

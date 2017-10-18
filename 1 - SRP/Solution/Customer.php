@@ -4,19 +4,37 @@ require "EmailServices.php";
 
 class Customer
 {
-	public $name;
-	public $email;
-	public $cpf;
-	public $registerDate;
+	private $name;
+	private $email;
+	private $registerDate;
 
-	function __construct($name, $email){
+	function getName(){
+		return $this->name;
+	}
+
+	function setName($name){
 		$this->name = $name;
-		$this->email = $email;
-	}	
+	}
 
-	function isValid(Customer $customer){
+	function getEmail(){
+		return $this->email;
+	}
+
+	function setEmail(){
+		$this->email = $email;
+	}
+
+	function getRegisterDate(){
+		return $this->registerDate;
+	}
+
+	function setRegisterDate(){
+		$this->registerDate = $registerDate;
+	}
+
+	function isValid(){
 		$service = new EmailServices();
 
-		return $service->isValid($customer->email);
+		return $service->isValid($this->email);
 	}
 }

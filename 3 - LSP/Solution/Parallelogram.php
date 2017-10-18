@@ -4,10 +4,21 @@ abstract class Parallelogram
 {
 	public $height;
 	public $width;
-	
-	function __construct($height, $width){
+
+	public function getHeight(){
+		return $this->height;
+	}
+
+	public function setHeight($height){
 		$this->height = $height;
+	}	
+
+	public function setWidth($width){
 		$this->width = $width;
+	}
+
+	public function getwidth(){
+		return $this->width;
 	}
 
 	function calculateArea(){
